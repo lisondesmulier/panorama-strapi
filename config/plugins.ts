@@ -1,3 +1,5 @@
+import 'dotenv/config';
+
 export default {
   upload: {
     config: {
@@ -9,4 +11,4 @@ export default {
       },
     },
   },
-}
+};
