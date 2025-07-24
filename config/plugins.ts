@@ -1,5 +1,3 @@
-import 'dotenv/config';
-
 export default {
   upload: {
     config: {
@@ -12,3 +10,7 @@ export default {
     },
   },
 };
+console.log('Cloudinary provider loaded with:', {
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key: process.env.CLOUDINARY_KEY,
+});
