@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "intro_la_societes",
+  "info": {
+    "singularName": "intro-la-societe",
+    "pluralName": "intro-la-societes",
+    "displayName": "societe-histoire"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "blocks"
+    }
+  }
+}

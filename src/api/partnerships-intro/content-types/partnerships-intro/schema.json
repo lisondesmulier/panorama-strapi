@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "partnerships_intros",
+  "info": {
+    "singularName": "partnerships-intro",
+    "pluralName": "partnerships-intros",
+    "displayName": "partnerships-intro"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "blocks"
+    }
+  }
+}

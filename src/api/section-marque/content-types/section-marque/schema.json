@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "section_marques",
+  "info": {
+    "singularName": "section-marque",
+    "pluralName": "section-marques",
+    "displayName": "realisations-marque"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nom": {
+      "type": "string"
+    },
+    "logoNB": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "logoCouleur": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "ordre": {
+      "type": "integer"
+    },
+    "lien": {
+      "type": "string"
+    }
+  }
+}

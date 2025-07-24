@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_contact_options",
+  "info": {
+    "displayName": "options"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

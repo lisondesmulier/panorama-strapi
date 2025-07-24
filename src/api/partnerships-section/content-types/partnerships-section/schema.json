@@ -1,0 +1,41 @@
+{
+  "kind": "singleType",
+  "collectionName": "partnerships_sections",
+  "info": {
+    "singularName": "partnerships-section",
+    "pluralName": "partnerships-sections",
+    "displayName": "home-partnerships"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "buttonText": {
+      "type": "string"
+    },
+    "imageBackground": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "imageBackgroundTelephone": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

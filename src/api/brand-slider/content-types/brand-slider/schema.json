@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "brand_sliders",
+  "info": {
+    "singularName": "brand-slider",
+    "pluralName": "brand-sliders",
+    "displayName": "societe-marques"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "brandsString": {
+      "type": "text"
+    }
+  }
+}

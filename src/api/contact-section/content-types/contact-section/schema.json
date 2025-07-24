@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_sections",
+  "info": {
+    "singularName": "contact-section",
+    "pluralName": "contact-sections",
+    "displayName": "contact-section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "phrase1": {
+      "type": "text"
+    },
+    "phrase2": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "titreFormulaire": {
+      "type": "string"
+    },
+    "options": {
+      "type": "component",
+      "component": "contact.options",
+      "repeatable": true
+    }
+  }
+}
