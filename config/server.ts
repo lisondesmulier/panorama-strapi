@@ -1,8 +1,9 @@
 export default ({ env }) => ({
-  host: env('HOST', '0.0.0.0'),
-  port: env.int('PORT', 1337),
-  url: env('PUBLIC_URL', ''), // ajoute ceci si besoin
+  url: env('PUBLIC_URL', 'https://panorama-cms-production.up.railway.app'),
   app: {
     keys: env.array('APP_KEYS'),
+  },
+  transfer: {
+    enabled: true, // 👈 active manuellement le transfert
   },
 });
