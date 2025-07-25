@@ -6,7 +6,8 @@ export default [
     config: {
       origin: [
         'http://localhost:3000',                  // Pour le dev local
-        'https://panorama-site.vercel.app'        // Pour le déploiement Vercel
+        'https://panorama-site.vercel.app'  ,
+         'https://panorama-be.com',      // Pour le déploiement Vercel
       ],
       methods: ['GET', 'POST', 'PUT', 'DELETE'],
       headers: ['Content-Type', 'Authorization'],
