@@ -17,6 +17,9 @@
     "members": {
       "type": "text"
     },
+    "ordre": {
+  "type": "integer"
+},
     "description": {
       "type": "text"
     },
