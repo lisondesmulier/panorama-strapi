@@ -27,6 +27,9 @@
         "audios"
       ]
     },
+        "ordre": {
+  "type": "integer"
+},
     "displayAsGreenTitle": {
       "type": "enumeration",
       "enum": [
