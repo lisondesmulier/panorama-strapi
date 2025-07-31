@@ -17,9 +17,7 @@
     "description": {
       "type": "text"
     },
-    "phraseAccroche": {
-      "type": "string"
-    },
+
     "heroBackground": {
       "type": "media",
       "multiple": false,
