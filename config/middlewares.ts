@@ -14,7 +14,6 @@ export default [
       headers: [
         'Content-Type',
         'Authorization',
-        'Access-Control-Allow-Origin', // ✅ Ajouté
       ],
       credentials: true,
     },
@@ -35,12 +34,6 @@ export default [
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
-  {
-  name: 'strapi::session',
-  config: {
-    secure: process.env.NODE_ENV === 'production',
-  },
-},
   'strapi::favicon',
   'strapi::public',
 ];
