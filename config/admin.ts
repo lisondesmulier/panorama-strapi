@@ -1,4 +1,5 @@
 export default ({ env }) => ({
+ // 👈 TEMPORAIRE pour test
   auth: {
     secret: env('ADMIN_JWT_SECRET'),
   },

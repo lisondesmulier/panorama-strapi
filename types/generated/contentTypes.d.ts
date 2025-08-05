@@ -546,7 +546,6 @@ export interface ApiIntroSectionIntroSection
       'api::intro-section.intro-section'
     > &
       Schema.Attribute.Private;
-    phraseAccroche: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.Text;
     updatedAt: Schema.Attribute.DateTime;
@@ -582,6 +581,7 @@ export interface ApiPartnershipBlockPartnershipBlock
       'api::partnership-block.partnership-block'
     > &
       Schema.Attribute.Private;
+    ordre: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -678,6 +678,7 @@ export interface ApiPolePole extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
+    ordre: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
