@@ -4,6 +4,11 @@ import { checkLimit } from "../../../extensions/rate-limit";
 
 export default ({ strapi }: { strapi: any }) => ({
   async send(ctx) {
+  // 👉 Fix CORS ici
+  ctx.set('Access-Control-Allow-Origin', ctx.request.header.origin || '*'); 
+  ctx.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  ctx.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
     const { nom, prenom, email, telephone, besoin, message } = ctx.request.body;
     const ip = ctx.request.ip;
 
