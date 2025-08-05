@@ -4,12 +4,9 @@ import { checkLimit } from "../../../extensions/rate-limit";
 
 export default ({ strapi }: { strapi: any }) => ({
   async send(ctx) {
-  // 👉 Fix CORS ici
-
     const { nom, prenom, email, telephone, besoin, message } = ctx.request.body;
     const ip = ctx.request.ip;
 
-    // Vérification des champs obligatoires
     if (!nom || !prenom || !email || !besoin || !message) {
       ctx.status = 400;
       ctx.body = { success: false, error: "Champs requis manquants" };
@@ -17,29 +14,18 @@ export default ({ strapi }: { strapi: any }) => ({
     }
 
     const isAllowed = checkLimit(ip, 3, 60 * 60 * 1000); // max 3 envois / heure
-if (!isAllowed) {
-  ctx.status = 429;
-  ctx.body = { success: false, error: "Trop d'envois récents. Réessayez plus tard." };
-  return;
-}
+    if (!isAllowed) {
+      ctx.status = 429;
+      ctx.body = { success: false, error: "Trop d'envois récents. Réessayez plus tard." };
+      return;
+    }
 
-    // Limite de sécurité
     if (message.length > 2000) {
       ctx.status = 400;
       ctx.body = { success: false, error: "Message trop long" };
       return;
     }
 
-    // Protection anti-spam basique 
-    const lastSent = ctx.session?.lastSent || 0; 
-    if (Date.now() - lastSent < 30000) { 
-      ctx.status = 429;
-      ctx.body = { success: false, error: "Trop de requêtes, réessayez plus tard." };
-      return;
-    }
-    ctx.session.lastSent = Date.now();
-
-    // Échapper les caractères HTML
     const safeNom = escapeHtml(nom);
     const safePrenom = escapeHtml(prenom);
     const safeEmail = escapeHtml(email);
