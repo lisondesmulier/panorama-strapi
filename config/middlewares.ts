@@ -5,13 +5,17 @@ export default [
     name: 'strapi::cors',
     config: {
       origin: [
-        'http://localhost:3000',                  // Pour le dev local
-        'https://panorama-site.vercel.app'  ,
-         'https://panorama-be.com',
-        'https://www.panorama-be.com',       // Pour le déploiement Vercel
+        'http://localhost:3000',
+        'https://panorama-site.vercel.app',
+        'https://panorama-be.com',
+        'https://www.panorama-be.com',
       ],
-      methods: ['GET', 'POST', 'PUT', 'DELETE'],
-      headers: ['Content-Type', 'Authorization'],
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // ✅ Ajout de OPTIONS ici
+      headers: [
+        'Content-Type',
+        'Authorization',
+        'Access-Control-Allow-Origin', // ✅ Ajouté
+      ],
       credentials: true,
     },
   },
@@ -21,7 +25,7 @@ export default [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "img-src": ["'self'", 'data:', 'blob:', 'https://res.cloudinary.com'], // si tu utilises Cloudinary
+          "img-src": ["'self'", 'data:', 'blob:', 'https://res.cloudinary.com'],
           "media-src": ["'self'", 'data:', 'blob:'],
           upgradeInsecureRequests: null,
         },
