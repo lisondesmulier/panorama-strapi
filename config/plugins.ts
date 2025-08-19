@@ -1,16 +1,17 @@
-export default {
+// config/plugins.ts
+export default ({ env }) => ({
+  // ❌ inutile si PAS sur Strapi Cloud
+  cloud: { enabled: false },
+
+  // ✅ upload via Cloudinary
   upload: {
     config: {
       provider: 'cloudinary',
       providerOptions: {
-        cloud_name: process.env.CLOUDINARY_NAME,
-        api_key: process.env.CLOUDINARY_KEY,
-        api_secret: process.env.CLOUDINARY_SECRET,
+        cloud_name: env('CLOUDINARY_NAME'),
+        api_key: env('CLOUDINARY_KEY'),
+        api_secret: env('CLOUDINARY_SECRET'),
       },
     },
   },
-};
-console.log('Cloudinary provider loaded with:', {
-  cloud_name: process.env.CLOUDINARY_NAME,
-  api_key: process.env.CLOUDINARY_KEY,
 });
