@@ -4,7 +4,7 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
-     "build": "cross-env NODE_OPTIONS=--max-old-space-size=1536 strapi build",
+    "build": "cross-env NODE_OPTIONS=--max-old-space-size=1536 strapi build",
     "start": "strapi start",
     "dev": "strapi develop",
     "console": "strapi console",
@@ -19,7 +19,6 @@
     "@strapi/plugin-users-permissions": "5.17.0",
     "@strapi/provider-upload-cloudinary": "^4.25.23",
     "@strapi/strapi": "5.17.0",
-    "better-sqlite3": "11.3.0",
     "escape-html": "^1.0.3",
     "nodemailer": "^7.0.5",
     "pg": "^8.16.3",
@@ -34,6 +33,7 @@
     "@types/node": "^20.19.9",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "better-sqlite3": "^11.3.0",
     "cross-env": "^10.0.0",
     "typescript": "^5"
   },
