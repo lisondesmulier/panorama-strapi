@@ -5,6 +5,7 @@
   "options": { "draftAndPublish": true },
   "attributes": {
     "contactInfos": { "type": "blocks" },
-    "legalText":   { "type": "blocks" }
+    "legalText": { "type": "blocks", "default": [] }
+
   }
 }
