@@ -1,18 +1,10 @@
 {
   "kind": "singleType",
   "collectionName": "footers",
-  "info": {
-    "singularName": "footer",
-    "pluralName": "footers",
-    "displayName": "footer"
-  },
-  "options": {
-    "draftAndPublish": true
-  },
-  "pluginOptions": {},
+  "info": { "singularName": "footer", "pluralName": "footers", "displayName": "footer" },
+  "options": { "draftAndPublish": true },
   "attributes": {
-    "contactInfos": {
-      "type": "blocks"
-    }
+    "contactInfos": { "type": "blocks" },
+    "legalText":   { "type": "richtext", "default": "" }
   }
 }
