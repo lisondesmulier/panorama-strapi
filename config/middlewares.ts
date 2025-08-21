@@ -7,6 +7,7 @@ export default [
       origin: [
         'http://localhost:3000',
         'https://panorama-site.vercel.app',
+        'https://panorama-site-celr.vercel.app/',
         'https://panorama-be.com',
         'https://www.panorama-be.com',
       ],
